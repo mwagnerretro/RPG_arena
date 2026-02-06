@@ -9,7 +9,7 @@ class Character:
 
     # take_damage() Method
     def take_damage(self, damage):
-        damage_taken = damage - self.defense
+        damage_taken = max(0, damage - self.defense)
         self.health -= damage_taken
         return damage_taken
 
